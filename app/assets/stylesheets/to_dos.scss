@@ -1,0 +1,298 @@
+// Place all the styles related to the to_dos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// ######=========================================Global=============================================##
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: burlywood;
+}
+
+// ######=========================================Global=============================================##
+
+// ######=========================================Index=============================================##
+.index_section{
+    display:grid;
+    background-image: url("to_do_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+}
+
+
+hr {
+    display: grid;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-length: 10px;
+}
+
+.hr-class {
+    display: grid;
+    margin-top: 0.47em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+.container.welcome_message {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 3em;
+    font-family: 'Nanum Brush Script', cursive;
+
+
+}
+
+
+.welcome_message {
+    color:white;
+    text-shadow: 0 0 1em rgb(26, 26, 145), 0 0 0.2em rgb(203, 238, 47);
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.mess-rec {
+    display:grid;
+    color:white;
+    text-shadow: 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(35, 10, 51);
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.btn.btn-primary.btn-delete{
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align:center;
+    background: rgb(162, 214, 221);
+    color: rgb(122, 25, 25);
+    margin-bottom: 0.3em;
+    font-family: 'Butcherman', cursive;
+
+    
+}
+
+.btn.btn-primary.btn-delete:hover{
+    background: rgb(169, 226, 94);
+
+}
+
+.btn.btn-primary{
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align:center;
+    background: rgb(122, 25, 25);
+
+    
+}
+
+.btn.btn-primary:hover{
+    background: rgb(29, 146, 230);
+
+}
+
+
+
+.note-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // background-color: gold;
+    background-image: url("dark_paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    border-bottom-color: aliceblue;
+}
+
+
+.note-title {
+    grid-column: 1 / span 1 ;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: bisque;
+    text-shadow: 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(35, 10, 51);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8em
+}
+
+.note-comments {
+    grid-column: 2 / span 1 ;
+    color: bisque;
+    text-shadow: 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(35, 10, 51);
+    font-family: 'Ama
+    tic SC', cursive;
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: 'Amatic SC', cursive;
+}
+
+.note-links {
+    grid-column: 3 / span 1 ;
+    // color: white;
+    // text-shadow: 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(35, 10, 51);
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+.edit-show {
+
+    color: white;
+    font-family: 'Boogaloo', cursive;
+}
+
+.container.centre-table{
+    display:grid;
+    grid-template-areas: 3fr 2fr
+    'tbody_class' 'tr_class';
+    
+    
+    ;
+    
+}
+
+@media (min-width: 200px){
+    display: grid;
+    grid-template-areas: 2fr 2fr;
+    
+    
+    
+    ;
+    
+
+
+
+}
+
+.tbody_class {
+    background-color: rgb(140, 207, 53);  
+    }
+
+// ##=====================new=================================
+.bg-for-new{
+display:grid;
+background-image: url("write.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+// background-position-x: -30em;
+
+}
+
+.Create-task{
+    color:white;
+    text-shadow: 0 0 1em rgb(26, 26, 145), 0 0 0.2em rgb(203, 238, 47);
+    font-family: 'Nanum Brush Script', cursive;
+    text-align: center;
+    margin-top: 6em;
+    font-size: 3.5em;
+
+}
+
+.transparent-form {
+        background-color: rgba(0, 0, 0, 0.377);
+        display:grid;
+        border-radius:0.5em;
+        align-items: center;
+        color: rgb(255, 221, 221);
+        text-shadow: 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(219, 255, 60);
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 1.4em;
+        padding: 3em;
+        margin-bottom: 60%;
+}
+
+.grid {
+    display:grid;
+    margin-right: 25%;
+    margin-left: 26%;
+   
+
+}
+#title-text-width{
+    height:2em;
+
+}
+
+.new-text-width {
+    width: 30em;
+    height:20em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    resize: none;
+}
+
+.new-text-width::placeholder{
+    font-family: 'Nanum Brush Script', cursive;
+    color: black;
+    // text-align:center;
+
+}
+
+.new-submit {
+    font-family: 'Nanum Brush Script', cursive;
+    color: black;
+    text-align:center;
+    justify-content: center;
+}
+
+.new-submit:hover {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-align:right;
+    background: rgb(48, 85, 48);
+    border-radius: 1em;
+}
+
+// ##=====================new=================================
+
+
+
+
+// ##=====================Edit=================================
+.edit-header {
+    color:white;
+    text-shadow: 0 0 1em rgb(26, 26, 145), 0 0 0.2em rgb(203, 238, 47);
+    font-family: 'Nanum Brush Script', cursive;
+    text-align: center;
+    margin-top: 6em;
+    font-size: 3.5em;
+}
+
+
+.container.bg-edit {
+    display:grid;
+    background-image: url("night_sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100em;
+    width: 100%;
+
+
+
+
+
+}
+
+
+
+
+
+
+// ##=====================Edit=================================
+
+
+
+
+// ######=========================================Index=============================================##
+
+

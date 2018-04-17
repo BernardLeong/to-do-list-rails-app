@@ -1,0 +1,27 @@
+<section class='bg-for-new'>
+  <h1 class='Create-task'>Create New Task</h1>
+
+
+  <div class= 'grid'>
+      <div>
+  <div class='transparent-form'>
+    
+    <%= form_for @todo , url: to_dos_path do |f| %>
+      Main Tasks:
+      <%= f.text_field :to_dos ,placeholder: 'Type your main task here !' ,class: 'new-text-width' ,id: 'title-text-width'%>
+         
+     
+      
+        <%= f.text_area :comments ,placeholder: 'Details ?' ,class: 'new-text-width'%>
+          <br/>
+
+          <button class= 'new-submit' type="submit">Create Your Magic !</button>
+          <!-- <%= f.submit %> -->
+        </div>
+        </div>
+  </div>
+
+  
+</section>
+
+<% end %>

@@ -1,0 +1,52 @@
+
+<section class='index_section'>
+    <div class="container welcome_message">
+        <h1>Welcome to Bernard's to-do list</h1>
+
+        <div>
+            <%= link_to 'Create New Task', new_to_do_path , class: 'btn btn-primary'%>
+        </div>
+
+
+    </div>
+    <div>
+        <h2 class='mess-rec'>Messages recorded</h2>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class='container centre-table'>
+        <div class='table_class'>
+            <% @desend.each do |t| %>
+
+                <div class='note-row'>
+                    <div class='note-title'>
+                    <%=link_to 'Title' , ascending_order_title_to_dos_path %>
+                        <div>
+                            <hr>
+                            <%= t.to_dos %>
+                        </div>
+                    </div>
+                    <div class='note-comments'>
+                    <div>Comments</div>
+                        <div>
+                                <hr>
+                            <%= t.comments %>
+                        </div>
+                    </div>
+
+                    <div class='note-links'>
+                        <%= link_to 'Edit', edit_to_do_path(t) , class: 'edit-show'  %>
+                            <%= link_to 'Show', to_do_path(t) , class: 'edit-show' %>
+                                <%= link_to 'Delete My Irritating Posts !', to_do_path(t) , class: 'btn btn-primary btn-delete' , method: :delete, data: {confirm: 'Delete this to do list?'} %>
+                                <hr class= 'hr-class'>
+                    </div>
+                </div>
+                <% end %>
+
+        </div>
+    </div>
+</section>
+
+
+<%=link_to 'Unsort' , to_dos_path %>

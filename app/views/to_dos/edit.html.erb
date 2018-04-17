@@ -1,0 +1,21 @@
+
+<div class= "container bg-edit">
+<%= form_for @todo, url: to_do_path(@todo), method: :put do |f| %>
+<h1 class= 'edit-header'>See the stars, think of what to change !</h1>
+<div class="field">
+<%= f.label :to_dos %>
+<%= f.text_field :to_dos %>
+
+<div class="field">
+<%= f.label :comments %>
+<%= f.text_field :comments %>
+</div>
+
+<div class= 'actions'>
+<%= f.submit %>
+</div>
+
+<% end %>
+
+<%= link_to 'Back' , to_dos_path %>
+</div>  
